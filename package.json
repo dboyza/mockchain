@@ -1,0 +1,15 @@
+{
+  "name": "mockchain",
+  "version": "1.0.0",
+  "description": "\u001b[A\u001b[BBlockchain Essentials project 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dylan Boyza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "morgan": "^1.10.0"
+  }
+}
