@@ -22,7 +22,7 @@ function chain(app) {
 
             .status(200) // HTTP status code 200: OK
 
-            .send(chainStr); // Response message
+            .send(global.navigation + chainStr); // Response message
 
     });
 

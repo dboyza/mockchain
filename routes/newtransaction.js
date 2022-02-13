@@ -31,7 +31,7 @@ function newtransaction(app) {
 
             .status(200) // HTTP status code 200: OK
 
-            .send(tx.prettify()); // Response message
+            .send(global.navigation + tx.prettify()); // Response message
 
     });
 

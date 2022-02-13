@@ -38,7 +38,7 @@ function validate(app) {
 
             .status(200) // HTTP status code 200: OK
 
-            .send(responseStr); // Response message
+            .send(global.navigation + responseStr); // Response message
 
     });
 

@@ -26,6 +26,9 @@ function listtransactions(app) {
 
         }
 
+        if (txStr === "") {
+            txStr += "No transactions have been made!"
+        }
 
 
         // Send the response for creating a new transaction
@@ -34,7 +37,7 @@ function listtransactions(app) {
 
             .status(200) // HTTP status code 200: OK
 
-            .send(txStr); // Response message
+            .send(global.navigation + txStr); // Response message
 
     });
 

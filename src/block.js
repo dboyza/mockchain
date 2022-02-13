@@ -37,6 +37,8 @@ class Block {
 
         this.nonce = 0; // Some random value for mining purposes
 
+        this.tries = 0
+
         // Mine the block
 
         this.mine();
@@ -89,8 +91,6 @@ class Block {
 
 
 
-        let tries = 0;
-
         while (!this.hash.startsWith(checkString)) {
 
             // Increase the nonce so we get a whole different hash
@@ -107,7 +107,7 @@ class Block {
 
             // Count our tries!
 
-            tries++;
+            this.tries++;
 
         }
 
@@ -115,7 +115,7 @@ class Block {
 
         // Out of curiosity, let's see how many tries we took!
 
-        console.log(`Block mined with ${tries} attempts. Hash: ${this.hash}`);
+        console.log(`Block mined with ${this.tries} attempts. Hash: ${this.hash}`);
 
     }
 
@@ -126,6 +126,8 @@ class Block {
         // Add basic block parameters
 
         let blockStr = `<div><b>Block</b> #${this.hash}</div>`;
+
+        blockStr = `<div><b>Attempts to mine:</b> ${this.tries}</div>`;
 
         blockStr += `<div><b>Timestamp:</b> ${this.timestamp}</div>`;
 

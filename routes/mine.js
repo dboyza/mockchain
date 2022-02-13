@@ -22,7 +22,7 @@ function mine(app) {
 
         let msg = `Block added: ${global.blockchain.getLastBlock().prettify()}`;
 
-        response.status(200).send(msg);
+        response.status(200).send(global.navigation + msg);
 
     });
 
